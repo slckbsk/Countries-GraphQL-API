@@ -1,0 +1,64 @@
+query getAllCountries {
+  countries {
+    id
+    name
+    capital
+    currency
+    emoji
+    languages {
+      name
+      native
+    }
+    continent {
+      continent
+    }
+  }
+}
+
+query GetCountry {
+  country(id: "AE") {
+    id
+    name
+    capital
+    currency
+    emoji
+    languages {
+      name
+      native
+    }
+    continent {
+      continent
+    }
+  }
+}
+
+query GetAllContinents {
+  continents {
+    country
+    continent
+  }
+}
+
+
+query getContinents {
+  continent (country:"Bulgaria") {
+    country
+    continent
+  }
+}
+
+
+
+query GetAllLanguages {
+  languages {
+    name
+    native
+  }
+}
+
+query GetLanguage {
+  language(id: "tr") {
+    name
+    native
+  }
+}
